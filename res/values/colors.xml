@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Soft Blue Palette -->
+    <color name="pastel_blue_primary">#AEC6CF</color>
+    <color name="pastel_blue_dark">#83A4B0</color>
+
+    <!-- Soft Pink Palette -->
+    <color name="pastel_pink_accent">#FFB7B2</color>
+
+    <!-- Soft Yellow Palette -->
+    <color name="pastel_yellow_highlight">#FFF1C5</color>
+
+    <!-- Background and Text Colors -->
+    <color name="pastel_background">#FAF8F5</color>
+    <color name="pastel_card_background">#FFFFFF</color>
+    <color name="pastel_text_dark">#333333</color>
+</resources>

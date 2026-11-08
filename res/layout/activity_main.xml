@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/pastel_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Rounded Title Header Card (Matching Button Rounded Corners) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/pastel_blue_primary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Excess Baggage Calculator"
+                app:titleTextColor="@color/pastel_text_dark" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Instructions Notice (Good Design Practice) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="Enter your baggage weight and rate below to calculate excess fees (includes 8% service tax)."
+            android:textSize="14sp"
+            android:textColor="@color/pastel_text_dark" />
+
+        <!-- Input 1: Baggage Weight -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Baggage Weight (kg)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Input 2: Ticket Class (Spinner Widget) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Select Ticket Class:"
+            android:textStyle="bold"
+            android:textColor="@color/pastel_text_dark" />
+
+        <Spinner
+            android:id="@+id/spinnerTicketClass"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp" />
+
+        <!-- Input 3: Rate per kg -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Rate per kg (RM)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Action Buttons (Increased Font Size and Spacing) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Calculate"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/pastel_text_dark"
+                android:backgroundTint="@color/pastel_pink_accent" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Clear"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/pastel_text_dark"
+                android:backgroundTint="@color/pastel_blue_primary" />
+        </LinearLayout>
+
+        <!-- Output Card (Pushed Lower Down with 32dp Top Margin) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/pastel_yellow_highlight"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvExcessWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excess Baggage Weight: 0.00 kg"
+                    android:textSize="16sp"
+                    android:textColor="@color/pastel_text_dark" />
+
+                <TextView
+                    android:id="@+id/tvExcessCharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Excess Baggage Charge: RM 0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/pastel_text_dark" />
+
+                <TextView
+                    android:id="@+id/tvTotalPayable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Total Amount Payable: RM 0.00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/pastel_text_dark" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

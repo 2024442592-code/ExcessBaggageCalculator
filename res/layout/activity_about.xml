@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Top Header Card with Back Navigation -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/pastel_blue_primary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/aboutToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="About Developer"
+                app:titleTextColor="@color/pastel_text_dark" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- App Logo -->
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_logo_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/about_app_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/pastel_text_dark" />
+
+        <!-- Developer Profile Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/pastel_card_background"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/pastel_blue_primary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUTHOR PROFILE"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/pastel_blue_dark"
+                    android:letterSpacing="0.1" />
+
+                <!-- Name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/author_name"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/pastel_text_dark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#E0E0E0" />
+
+                <!-- Student ID -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Student ID:"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text_dark" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/student_id"
+                        android:textColor="@color/pastel_text_dark" />
+                </LinearLayout>
+
+                <!-- Group -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Group:"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text_dark" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/group_code"
+                        android:textColor="@color/pastel_text_dark" />
+                </LinearLayout>
+
+                <!-- Programme Code -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Programme Code:"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text_dark" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/programme_code"
+                        android:textColor="@color/pastel_text_dark" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- GitHub Web Link Card (Clickable Soft Pink Card) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardGithub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/pastel_pink_accent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔗 Open GitHub Repository"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/pastel_text_dark" />
+
+                <TextView
+                    android:id="@+id/tvGithubUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/github_url"
+                    android:textSize="12sp"
+                    android:textColor="#444444" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Back Button to Return to Calculator -->
+        <Button
+            android:id="@+id/btnBackToCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:text="← Back to Calculator"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/pastel_text_dark"
+            android:backgroundTint="@color/pastel_yellow_highlight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/copyright_notice"
+            android:textSize="12sp"
+            android:textColor="#888888" />
+
+    </LinearLayout>
+</ScrollView>

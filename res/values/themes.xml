@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ExcessBaggageCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary branding color (Soft Blue) -->
+        <item name="colorPrimary">@color/pastel_blue_primary</item>
+        <item name="colorPrimaryVariant">@color/pastel_blue_dark</item>
+        <item name="colorOnPrimary">@color/pastel_text_dark</item>
+
+        <!-- Secondary / Accent color (Soft Pink) -->
+        <item name="colorSecondary">@color/pastel_pink_accent</item>
+        <item name="colorOnSecondary">@color/pastel_text_dark</item>
+
+        <!-- Background colors (Soft Warm White) -->
+        <item name="android:windowBackground">@color/pastel_background</item>
+        <item name="colorSurface">@color/pastel_card_background</item>
+    </style>
+
+    <style name="Theme.ExcessBaggageCalculator" parent="Base.Theme.ExcessBaggageCalculator" />
+</resources>

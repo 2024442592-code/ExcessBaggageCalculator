@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme settings -->
+    <style name="Theme.ExcessBaggageCalculator" parent="Base.Theme.ExcessBaggageCalculator" />
+</resources>

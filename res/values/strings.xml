@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Excess Baggage Calculator</string>
+    <string name="app_logo_desc">App Logo</string>
+    <string name="about_app_title">Excess Baggage Fee Estimator</string>
+    <string name="author_name">NUR JANNAH BINTI ISMAIL</string>
+    <string name="group_code">Group 5A</string>
+    <string name="student_id">2024442592</string>
+    <string name="programme_code">CDCS251</string>
+    <string name="github_url">https://github.com/2024442592-code/ExcessBaggageCalculator</string>
+    <string name="copyright_notice">© 2026 ICT602 Mobile Technology. All Rights Reserved.</string>
+</resources>
